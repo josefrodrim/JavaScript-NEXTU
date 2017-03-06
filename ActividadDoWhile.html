@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad Do While</title>
+  </head>
+  <body>
+    <h1>Actividad do while</h1>
+    <p id="salida"></p>
+    <button onclick="mostrarDatos()">MostrarDatos</button>
+  </body>
+
+  <script>
+    var equipos = ["Milan", "Liverpool", "Barcelona", "Chelsea", "Bayern"];
+    var texto = "";
+    var i = 0;
+    function mostrarDatos() {
+      do {
+        texto += equipos[i] + "<br>";
+        i++
+      } while (i<equipos.length);
+      document.getElementById("salida").innerHTML = texto;
+    }
+  </script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Ejercicio 2</title>
+  </head>
+  <body>
+
+    <h1>Estudiantes</h1>
+
+    <h1>Estudiante 1</h1>
+
+    <p id="c1"></p>
+    <p id="n1"></p>
+    <p id="t1"></p>
+
+    <h1>Estudiante 2</h1>
+
+    <p id="c2"></p>
+    <p id="n2"></p>
+    <p id="t2"></p>
+
+    <h1>Estudiante 3</h1>
+
+    <p id="c3"></p>
+    <p id="n3"></p>
+    <p id="t3"></p>
+
+  </body>
+
+  <script>
+
+  var estudiante1 = {
+    codigo : "123",
+    nombre : "josef",
+    telefono : 789654123
+
+  }
+
+  document.getElementById("c1").innerHTML = estudiante1.codigo;
+  document.getElementById("n1").innerHTML = estudiante1.nombre;
+  document.getElementById("t1").innerHTML = estudiante1.telefono;
+
+  var estudiante2 = new Object();
+  estudiante2.codigo    = "456";
+  estudiante2.nombre    = "Paola";
+  estudiante2.telefono  = 123987456
+
+  document.getElementById("c2").innerHTML = estudiante2.codigo;
+  document.getElementById("n2").innerHTML = estudiante2.nombre;
+  document.getElementById("t2").innerHTML = estudiante2.telefono;
+
+  function estudiante3(codigo, nombre, telefono){
+      this.codigo = codigo;
+      this.nombre = nombre;
+      this.telefono = telefono;
+
+  }
+
+  var estudiante3 = new estudiante3("123","Rachel",654123789);
+
+  document.getElementById("c3").innerHTML = estudiante3.codigo;
+  document.getElementById("n3").innerHTML = estudiante3.nombre;
+  document.getElementById("t3").innerHTML = estudiante3.telefono;
+
+
+  </script>
+</html>

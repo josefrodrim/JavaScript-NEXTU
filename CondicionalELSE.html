@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Condicional ELSE</title>
+  </head>
+  <body>
+    <h1>Condicional ELSE</h1>
+    <p>Edad 25</p>
+    <p id="edad"></p>
+    <button onclick="verificarEdad()">Verificar Edad</button>
+  </body>
+  <script>
+    var edad =15;
+    function verificarEdad() {
+
+
+      if (edad>=25) {
+        document.getElementById("edad").innerHTML = "la persona es mayor de Edad";
+      } else {
+        document.getElementById("edad").innerHTML = "La persona es menor de edad";
+    }
+    }
+  </script>
+</html>

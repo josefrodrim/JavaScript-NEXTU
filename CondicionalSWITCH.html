@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>COndicional Switch</title>
+  </head>
+  <body>
+    <h1>Condicional Switch</h1>
+    <p id="mes"></p>
+    <button onclick = "verificarMes()" > Verificar Mes</button>
+  </body>
+  <script>
+  var opc = 10;
+
+      function verificarMes() {
+        switch (opc) {
+          case 1: document.getElementById("mes").innerHTML= "El mes es Enero"; break;
+
+          case 2: document.getElementById("mes").innerHTML= "El mes es Febrero"; break;
+
+          case 3: document.getElementById("mes").innerHTML= "El mes es Marzo"; break;
+
+          case 4: document.getElementById("mes").innerHTML= "El mes es Abril"; break;
+
+          case 5: document.getElementById("mes").innerHTML= "El mes es Mayo"; break;
+
+          case 6: document.getElementById("mes").innerHTML= "El mes es Junio"; break;
+
+          case 7: document.getElementById("mes").innerHTML= "El mes es Julio"; break;
+
+          case 8: document.getElementById("mes").innerHTML= "El mes es Agosto"; break;
+
+          case 9: document.getElementById("mes").innerHTML= "El mes es Setiembre"; break;
+
+          case 10: document.getElementById("mes").innerHTML= "El mes es Octubre"; break;
+
+          case 11: document.getElementById("mes").innerHTML= "El mes es Noviembre"; break;
+
+          case 12: document.getElementById("mes").innerHTML= "El mes es Diciembre"; break;
+
+          default: document.getElementById("mes").innerHTML= "Mes desconocido";
+
+
+        }
+      }
+  </script>
+</html>

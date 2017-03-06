@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Codigo 3</title>
+  </head>
+  <body>
+    <h1>Resta</h1>
+    <p id="n1"></p>
+  </body>
+
+  <script>
+    var numero = 100;
+    Number.prototype.metodoResta = function(){
+      return this-20;
+    }
+
+    document.getElementById("n1").innerHTML = numero.metodoResta();
+  </script>
+</html>

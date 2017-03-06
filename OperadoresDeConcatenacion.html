@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Operadores de Concatenacion</title>
+  </head>
+  <body>
+    <h1>Operadores de Concatenacion</h1>
+
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <p id="s3"></p>
+    <p id="s4"></p>
+    <p id="s5"></p>
+    <p id="s6"></p>
+
+  </body>
+  <script>
+
+  var a = "Hola como";
+  var b = " estan ustedes?"
+  cadena1 = a + b;
+  document.getElementById("s1").innerHTML = cadena1;
+
+  var cadena2 = "Feliz ";
+  var texto1 = "como "
+  var texto2 = "una lombriz"
+
+  cadena2 += texto1;
+  cadena2 += texto2;
+  document.getElementById("s2").innerHTML = cadena2;
+
+  var c = "Pienso";
+  var d = " luego existo..."
+  cadena3 = c+d;
+
+  document.getElementById("s3").innerHTML = cadena3;
+  document.getElementById("s4").innerHTML = "Vivir es " + "nacer " + "a cada instante";
+  document.getElementById("s5").innerHTML = "La moda es " + "lo que " + "pasa de moda";
+  document.getElementById("s6").innerHTML = "La vida " + "es un " + "juego de " + "azar"; 
+
+  </script>
+</html>

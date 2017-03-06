@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Codigo 5</title>
+  </head>
+  <body>
+    <p  id="n1"  ></p>
+  </body>
+
+  <script>
+  Number.prototype.metodoDivision = function () {
+    return this/2;
+  };
+
+  var numero = 100;
+
+  document.getElementById("n1").innerHTML = numero.metodoDivision();
+
+  </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad ELSE-IF</title>
+  </head>
+  <body>
+    <h1>Actividad ELSE-IF</h1>
+    <p id="n"></p>
+    <button onclick="verificarPar()" > El numero es par?</button>
+  </body>
+  <script>
+    var numero = 15;
+    function verificarPar() {
+      if (numero%2!=0) {
+        document.getElementById("n").innerHTML = "El numero no es PAR";
+      }else if (true) {
+        document.getElementById("n").innerHTML = "El numero  es PAR";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Codigo 2</title>
+  </head>
+  <body>
+      <h1>Metodo Suma</h1>
+      <p id="numero1"></p>
+  </body>
+
+  <script>
+
+      Number.prototype.metodoSuma = function () {
+          return this+10;
+      }
+
+  var numero = 100;
+
+  document.getElementById("numero1").innerHTML = numero.metodoSuma();
+
+
+  </script>
+</html>

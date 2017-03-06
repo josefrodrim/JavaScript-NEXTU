@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+
+    <h1>Personas</h1>
+
+    <h1>Persona 1</h1>
+    <p id="i1"></p>
+    <p id="n1"></p>
+    <p id="e1"></p>
+
+
+    <h1>Persona 2</h1>
+    <p id="i2"></p>
+    <p id="n2"></p>
+    <p id="e2"></p>
+
+    <h1>Persona 3</h1>
+    <p id="i3"></p>
+    <p id="n3"></p>
+    <p id="e3"></p>
+
+
+
+  </body>
+
+  <script>
+
+    var persona1 = {
+      id : "123",
+      nombre : "Josef",
+      edad : 21
+    }
+
+    document.getElementById("i1").innerHTML = persona1.id;
+    document.getElementById("n1").innerHTML = persona1.nombre;
+    document.getElementById("e1").innerHTML = persona1.edad;
+
+    var persona2 = new Object();
+    persona2.id = "456";
+    persona2.nombre = "Benita";
+    persona2.edad = 32;
+
+    document.getElementById("i2").innerHTML = persona2.id;
+    document.getElementById("n2").innerHTML = persona2.nombre;
+    document.getElementById("e2").innerHTML = persona2.edad;
+
+    function persona3(id, nombre, edad) {
+      this.id = id;
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+
+    var persona3 = new persona3("321","Rebeca",17);
+
+    document.getElementById("i3").innerHTML = persona3.id;
+    document.getElementById("n3").innerHTML = persona3.nombre;
+    document.getElementById("e3").innerHTML = persona3.edad;
+
+  </script>
+</html>

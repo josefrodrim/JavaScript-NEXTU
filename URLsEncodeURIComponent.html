@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Metodo encodeURIComponent()</title>
+  </head>
+  <body>
+    <h1>Metodo encodeURIComponent()</h1>
+    <p id="g1"></p>
+    <p id="g2"></p>
+    <p id="g3"></p>
+    <p id="g4"></p>
+    <p id="g5"></p>
+    <p id="g6"></p>
+    <p id="g7"></p>
+    <p id="g8"></p>
+    <p id="g9"></p>
+    <p id="g10"></p>
+  </body>
+  <script>
+
+    var uri1 = "http://nextuniversity.com/es/";
+    var uri2 = "http://www.w3.org/";
+    var uri3 = "https://www.facebook.com/";
+    var uri4 = "https://twitter.com/";
+    var uri5 = "http://instagram.com/";
+    var uri6 = "https://www.youtube.com";
+    var uri7 = "http://www.oracle.com/es/index.html";
+    var uri8 = "https://vine.co/";
+    var uri9 = "https://es.pinterest.com/";
+    var uri10 = "http://latam.motorola.com/";
+
+    document.getElementById("g1").innerHTML = encodeURIComponent(uri1);
+    document.getElementById("g2").innerHTML = encodeURIComponent(uri2);
+    document.getElementById("g3").innerHTML = encodeURIComponent(uri3);
+    document.getElementById("g4").innerHTML = encodeURIComponent(uri4);
+    document.getElementById("g5").innerHTML = encodeURIComponent(uri5);
+    document.getElementById("g6").innerHTML = encodeURIComponent(uri6);
+    document.getElementById("g7").innerHTML = encodeURIComponent(uri7);
+    document.getElementById("g8").innerHTML = encodeURIComponent(uri8);
+    document.getElementById("g9").innerHTML = encodeURIComponent(uri9);
+    document.getElementById("g10").innerHTML = encodeURIComponent(uri10);
+  </script>
+</html>

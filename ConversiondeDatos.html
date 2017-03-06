@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Conversion de Datos</title>
+  </head>
+  <body>
+    <h1>Conversion de datos</h1>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p>
+    <p id="d9"></p>
+    <p id="d10"></p>
+    <p id="d11"></p>
+    <p id="d12"></p>
+    <p id="d13"></p>
+    <p id="d14"></p>
+    <p id="d15"></p>
+    <p id="d16"></p>
+  </body>
+  <script>
+    //Conversion de Number a String
+    var string1 = String(15);
+    var string2 = String(3+4);
+
+    var number1 = 20;
+
+    var string3 = number1.toString();
+    var string4 = (30).toString();
+
+    //Conversion de Boolean a String
+
+    var string5 = String(true);
+    var string6 = String(false);
+
+    var string7 = true.toString();
+    var string8 = false.toString();
+
+    //Conversion de Date a String
+
+    var string9 = String(Date());
+    var string10 = Date().toString();
+
+    //Conversion de String a number
+
+    var number2 = Number("6.5");
+    var number3 = Number("");
+    var number4 = parseInt("2014");
+    var number5 = parseFloat("3.1416");
+
+    //Conversion de boolean a Number
+
+    var number6 = Number(true);
+    var number7 = Number(false);
+
+    document.getElementById("d1").innerHTML = string1;
+    document.getElementById("d2").innerHTML = string2;
+    document.getElementById("d3").innerHTML = string3;
+    document.getElementById("d4").innerHTML = string4;
+    document.getElementById("d5").innerHTML = string5;
+    document.getElementById("d6").innerHTML = string6;
+    document.getElementById("d7").innerHTML = string7;
+    document.getElementById("d8").innerHTML = string8;
+    document.getElementById("d9").innerHTML = string9;
+    document.getElementById("d10").innerHTML = string10;
+
+    document.getElementById("d11").innerHTML = number2;
+    document.getElementById("d12").innerHTML = number3;
+    document.getElementById("d13").innerHTML = number4;
+    document.getElementById("d14").innerHTML = number5;
+    document.getElementById("d15").innerHTML = number6;
+    document.getElementById("d16").innerHTML = number7;
+
+
+
+
+  </script>
+</html>

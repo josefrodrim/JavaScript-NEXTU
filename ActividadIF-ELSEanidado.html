@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad If-else anidado</title>
+  </head>
+  <body>
+    <h1>Actividad if-else anidados</h1>
+    <p id="n"></p>
+    <button onclick="verificarNota()">Verifica tu Nota</button>
+  </body>
+  <script>
+    var nota = 4.5;
+
+    function verificarNota() {
+      if ( nota>3 && nota < 4) {
+        document.getElementById("n").innerHTML = "Su nota es de nibel medio"
+      }if (nota>4 && nota <5) {
+        document.getElementById("n").innerHTML = "Su nota es de nivel alto"
+      } else {
+        document.getElementById("n").innerHTML = "Su nota es de nivel bajo"
+      }
+    }
+
+  </script>
+</html>

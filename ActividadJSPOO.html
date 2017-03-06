@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad JS y POO</title>
+  </head>
+  <body>
+    <h1>JS Orientado a objetos</h1>
+    <p id="show"></p>
+    <button onclick="mostrar()">Mostrar Producto</button>
+  </body>
+  <script>
+    function Producto(codigo, nombre, cantidad, precio){
+      this.codigo = codigo;
+      this.nombre = nombre;
+      this.cantidad = cantidad;
+      this.precio = precio;
+
+    }
+
+  var producto = new Producto("001","Josef",5, 12.5);
+
+  function mostrar() {
+    document.getElementById("show").innerHTML = "codigo: " + producto.codigo + "<br>" +
+                                                " nombre: " + producto.nombre + "<br>" +
+                                                " cantidad: " + producto.cantidad + "<br>" +
+                                                " precio: " + producto.precio;
+  }
+  </script>
+</html>

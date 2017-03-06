@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad switch</title>
+  </head>
+  <body>
+    <h1>Actividad Switch</h1>
+    <p id="op"></p>
+    <button onclick="verificarDia()"> Verifique el dia</button>
+  </body>
+  <script>
+    var opc = 4;
+    function verificarDia() {
+      switch (opc) {
+
+        case 1: document.getElementById("op").innerHTML = "El dia es Lunes...!!"; break;
+        case 2: document.getElementById("op").innerHTML = "El dia es Martes...!!"; break;
+        case 3: document.getElementById("op").innerHTML = "El dia es Miercoles...!!"; break;
+        case 4: document.getElementById("op").innerHTML = "El dia es Jueves...!!"; break;
+        case 5: document.getElementById("op").innerHTML = "El dia es Viernes...!!"; break;
+
+
+        default: case 1: document.getElementById("1").innerHTML = "El dia no existe...!!";
+
+      }
+    }
+  </script>
+</html>

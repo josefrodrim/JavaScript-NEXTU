@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividar For</title>
+  </head>
+  <body>
+    <h1>Pares del 1 al 100 utilizando for</h1>
+    <p id="salida"></p>
+    <button onclick="conteoPares()">Mostrar Conteo</button>
+  </body>
+  <script>
+  var texto = "";
+
+  function conteoPares() {
+
+    for (var i = 1; i <= 100; i++) {
+      if (i%2==0) {
+        texto += i + "<br>";
+      }
+
+    }
+    document.getElementById("salida").innerHTML = texto;
+  }
+
+  </script>
+</html>

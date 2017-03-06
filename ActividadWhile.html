@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad while</title>
+  </head>
+  <body>
+    <h1>Actividad While</h1>
+    <p id="salida"></p>
+    <button onclick="mostrar()">Mostrar Numeros</button>
+  </body>
+
+  <script>
+    function mostrar() {
+      var texto = "";
+      var contador = 1;
+      while (contador <=100) {
+        if (contador%2 != 0) {
+          texto += contador + "<br>";
+        }
+        contador++;
+      }
+
+      document.getElementById("salida").innerHTML = texto;
+    }
+  </script>
+</html>

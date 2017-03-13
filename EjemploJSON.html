@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi Primer JSON</title>
+  </head>
+  <body>
+    <p id="empresas"></p>
+  </body>
+  <script>
+    var jsonText = '{"empresas":['+
+                    '{"nit":"3432-1", "nombre":"TCC", "telefono":"3324933", "email":"tcc@hotmail.com" },'+
+                    '{"nit":"5567-1", "nombre":"Movistar", "telefono":"3556566", "email":"movistar@hotmail.com" },'+
+                    '{"nit":"67657-1", "nombre":"Nokia", "telefono":"3424933", "email":"nokia@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Exito", "telefono":"3724933", "email":"exito@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Postobon", "telefono":"33564933", "email":"postobon@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Puma", "telefono":"3324933", "email":"puma@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Mexichiken", "telefono":"3324933", "email":"mexchicken@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Compaq", "telefono":"3324933", "email":"compaq@hotmail.com" },'+
+                    '{"nit":"3432-1", "nombre":"Alcatel", "telefono":"3324933", "email":"alcatel@hotmail.com" }'+
+                    ']}';
+
+    var jsObj = JSON.parse(jsonText);
+
+    function leerJSON(json) {
+       var out = "-----------Empresas-----------<br>";
+       var i;
+       for ( i = 0; i < json.empresas.length; i++) {
+          out += "Nit: " + json.empresas[i].nit + " - " + "Nombre: " + json.empresas[i].nombre + " - " + "Telefono: " + json.empresas[i].telefono + " - " + "Email: " + json.empresas[i].email + "<br>";
+       }
+       document.getElementById("empresas").innerHTML = out;
+
+    }
+leerJSON(jsObj);
+  </script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad Jason</title>
+
+    <h1>JSON Actividad 2</h1>
+    <p id="vendidos"></p>
+    <p id="total"></p>
+    <button onclick="mostrarVentas()">Mostrar Ventas</button>
+    <button onclick="sumaVentas()">Mostrar total Ventas</button>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    var ventas = [
+                    {
+                      "nombre": "Arroz",
+                      "precio": 2
+                    },
+                    {
+                      "nombre": "Azucar",
+                      "precio": 2
+                    },
+                    {
+                      "nombre": "Maiz",
+                      "precio": 3
+                    },
+                    {
+                      "nombre": "Cafe",
+                      "precio": 4
+                    },
+                    {
+                      "nombre": "Leche",
+                      "precio": 1
+                    },
+                    {
+                      "nombre": "Atun",
+                      "precio": 5
+                    },
+                    {
+                      "nombre": "Queso",
+                      "precio": 2
+                    },
+                    {
+                      "nombre": "Huevos",
+                      "precio": 6
+                    },
+                    {
+                      "nombre": "Harina",
+                      "precio": 3
+                    },
+                    {
+                      "nombre": "Yogurt",
+                      "precio": 5
+                    },
+                    {
+                      "nombre": "Gaseosa",
+                      "precio": 5
+                    }
+
+    ];
+
+    function leerJSON(json) {
+      var out = "";
+      for (var i = 0; i < json.length; i++) {
+        out += "Nombre: " + json[i].nombre + " - " + "Precio: " + json[i].precio + "<br>";
+
+      }
+      document.getElementById("vendidos").innerHTML = out;
+    }
+
+    function leerMayores(json) {
+      var out = 0;
+      for (var i = 0; i < json.length; i++) {
+        out+=json[i].precio;
+      }
+      document.getElementById("total").innerHTML ="La suma total es: " + out;
+    }
+
+    function mostrarVentas(){
+      leerJSON(ventas);
+    }
+    function sumaVentas(){
+      leerMayores(ventas);
+    }
+
+
+  </script>
+</html>

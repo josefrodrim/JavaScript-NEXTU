@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Examen Final</title>
+    <head>
+      <meta content="text/html"; charset="utf-8">
+
+  </head>
+  <body>
+    <h1 align="center">Notas Estudiantes</h1>
+
+
+<table >
+
+    <tr>
+      <td><button  align="center" onclick="mostrarEstudiantes()">Mostrar Estudiantes</button></td>
+    </tr>
+    <tr>
+        <td><button align="center" onclick="mostrarPromedio()">Mostrar Promedio</button></td>
+    </tr>
+    <tr>
+        <td> <button align="center" onclick="mostrarMayor()">Mostrar Nota mayor</button></td>
+    </tr>
+    <tr>
+      <td>
+      <button  align="center" onclick="mostrarMenor()">Mostrar Nota menor</button>
+      </td>
+    </tr>
+
+</table>
+
+
+  <h2 align="center">Relacion de Estudiantes:</h2>
+  <p align="center" id="estudiantes"></p>
+  <h2 align="center">Promedio de las notas:</h2>
+  <p align="center" id="promedio" ></p>
+  <h2 align="center">El alumno con mayor nota es:</h2>
+  <p align="center" id="mayor"></p>
+  <h2 align="center">El alumno con menor nota es:</h2>
+  <p align="center" id="menor"></p>
+
+  </body>
+  <script type="text/javascript">
+  var estudiantes = [
+                    {
+                      "codigo":"001",
+                      "nombre":"Josef",
+                      "nota": 15
+                    },
+                    {
+                      "codigo":"002",
+                      "nombre":"Paula ",
+                      "nota": 14
+                    },
+                    {
+                      "codigo":"003",
+                      "nombre":"Mirko",
+                      "nota": 12
+                    },
+                    {
+                      "codigo":"004",
+                      "nombre":"Renato",
+                      "nota": 10
+                    },
+                    {
+                      "codigo":"005",
+                      "nombre":"Juan",
+                      "nota": 8
+                    },
+                    {
+                      "codigo":"006",
+                      "nombre":"Jasmine",
+                      "nota": 11
+                    },
+                    {
+                      "codigo":"007",
+                      "nombre":"Raquel",
+                      "nota": 17
+                    },
+                    {
+                      "codigo":"008",
+                      "nombre":"Gabriela",
+                      "nota": 20
+                    },
+                    {
+                      "codigo":"009",
+                      "nombre":"Miguel",
+                      "nota": 0
+                    },
+                    {
+                      "codigo":"010",
+                      "nombre":"Luis",
+                      "nota": 18
+                    }
+
+  ];
+//funcion para mostrar estudiantes
+  function leerJSON(json) {
+    var out = "";
+    for (var i = 0; i < json.length; i++) {
+      out += "Codigo: " + json[i].codigo + " - " + "Nombre: " + json[i].nombre+ " - "  + "Nota: " + json[i].nota  + "<br>";
+
+    }
+    document.getElementById("estudiantes").innerHTML = out;
+  }
+
+  function mostrarEstudiantes(){
+    leerJSON(estudiantes);
+  }
+//Funcion para sacar y mostrar promedio
+  function promedio(json) {
+    var promedio = 0;
+    for (var i = 0; i < json.length; i++) {
+      promedio+= json[i].nota;
+    }
+    promedio = (promedio/json.length);
+    document.getElementById("promedio").innerHTML = promedio;
+  }
+
+  function mostrarPromedio(){
+    promedio(estudiantes);
+  }
+//Funcion para sacar y mostrar la mayor nota
+  function mayor(json) {
+    var max=0;
+    var j= 0;
+    for (var i = 0; i < json.length; i++) {
+      if (json[i].nota>=max) {
+        max = json[i].nota;
+        j=i;
+      }
+    document.getElementById("mayor").innerHTML = "Codigo: " + json[j].codigo + " - " + "Nombre: " + json[j].nombre+ " - "  + "Nota: " + json[j].nota  + "<br>";
+  }
+}
+
+function mostrarMayor(){
+  mayor(estudiantes);
+}
+
+//funcion para sacar y mostrar la menor nota
+function menor(json) {
+  var min=21;
+  var j = 0;
+    for (var i = 0; i < json.length; i++) {
+      if (json[i].nota<=min) {
+        min = json[i].nota;
+        j=i;
+      }
+      document.getElementById("menor").innerHTML = "Codigo: " + json[j].codigo + " - " + "Nombre: " + json[j].nombre+ " - "  + "Nota: " + json[j].nota  + "<br>";
+    }
+}
+
+  function mostrarMenor(){
+    menor(estudiantes);
+}
+  </script>
+</html>

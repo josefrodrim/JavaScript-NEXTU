@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Eventos</title>
+  </head>
+  <body onload="alerta()">
+    <h1 align=center> Hoja de Vida </h1>
+
+    <form onreset="restablecer()">
+
+
+    <h2>Informacion Personal</h2>
+    Nombres: <input type="text" id="mayuscula" onchange="letrasMayusculas()"><br>
+    Apellidos: <input type="text" id="mayuscula1" onchange="letrasMayusculas()"><br>
+    Direccion: <input type="text" ><br>
+    Edad: <input type="text" ><br>
+    Fecha de Nacimiento: <input type="Date" ><br>
+    Lugar de Nacimiento: <input type="text" ><br>
+    Estado Civil: <input type="text" ><br>
+    <h2>Informacion Academica</h2>
+    Universidad: <input type="text" ><br>
+    Profesion: <input type="text" ><br>
+    Observaciones:<br><textarea onselect="alertaObs()">Observaciones</textarea>
+    <br>
+
+    <input type="button"  value="Enviar" onclick="guardar()">
+    <input type="reset" value="Restablecer">
+     </form>
+    </body>
+ <script type="text/javascript">
+  function alerta() {
+    alert("Bievenido a su Hoja de Vida");
+  }
+  function alertaObs() {
+    alert("se ha seleccionado el texto");
+  }
+   function letrasMayusculas() {
+     x =document.getElementById("mayuscula");
+     y = document.getElementById("mayuscula1");
+     x.value = x.value.toUpperCase();
+     y.value = y.value.toUpperCase();
+   }
+   function restablecer() {
+     alert("se ha restablecido el texto");
+   }
+   function guardar() {
+     alert("Su hoja de vida ha sido guardada Correctamente");
+   }
+ </script>
+
+</html>

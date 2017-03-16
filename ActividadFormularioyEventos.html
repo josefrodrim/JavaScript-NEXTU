@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html"; charset="utf-8">
+    <style type = "text/css">
+      body{
+        background: #ECF0F1
+      }
+      label{
+        font-weight: bold;
+      }
+      select{
+        width: 100%;
+      }
+      #contenedor{
+        background: #CCCCCC;
+        width: 500px;
+        margin: 110px 0 0 400px;
+      }
+    </style>
+    <title>Activida Formulario</title>
+  </head>
+  <body onload="evento_onload()">
+
+    <div id="contenedor" align = "center"><h1>Estudiantes de Educacion</h1>
+    <table>
+      <form id="formulario">
+        <tr>
+          <td><label>Codigo:</label></td>
+          <td><input  id="codigo" type="text" name="codigo" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Nombres:</label></td>
+          <td><input  id="nombres" type="text" name="nombres" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Apellidos:</label></td>
+          <td><input  id="apellidos" type="text" name="apellidos" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Identificacion:</label></td>
+          <td><input  id="identificacion" type="text" name="identificacion" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Genero:</label></td>
+          <td><select id="sexo" name="sexo" onfocus="evento_onfocus(this)">
+            <option value="" name=""></option>
+            <option value="masculino" name="masculino">Masculino</option>
+            <option value="femenino" name="femenino">Femenino</option>
+          </select></td>
+
+        </tr>
+        <tr>
+          <td><label>Fecha de Nacimiento:</label></td>
+          <td><input  id="fnacimiento" type="Date" name="fnacimiento" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Email:</label></td>
+          <td><input  id="email" type="text" name="email" oncopy="evento_oncopy()"></td>
+        </tr>
+        <tr>
+          <td><label>Telefono:</label></td>
+          <td><input  id="telefono" type="text" name="telefono" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label>Direccion:</label></td>
+          <td><input  id="direccion" type="text" name="direccion" onfocus="evento_onfocus(this)" ></td>
+        </tr>
+        <tr>
+          <td><label>Observaciones:</label></td>
+          <td><textarea id="observaciones" name="observaciones" onfocus="evento_onfocus(this)">Observaciones</textarea></td>
+        </tr>
+        <tr>
+          <td><input id="enviar" type="submmit" name="enviar" value="Enviar" onclick="evento_onclick()"></td>
+        </tr>
+      </form>
+    </table>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function evento_onload() {
+      alert("Ingrese los datos de Usuario");
+    }
+    function evento_onclick() {
+      alert("Los datos han sido enviados");
+    }
+    function evento_onfocus(x) {
+      x.style.background = "#ECF0F1";
+    }
+      function evento_oncopy() {
+        alert("El texto ha sido copiado");
+    }
+  </script>
+</html>
